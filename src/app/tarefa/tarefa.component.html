@@ -1,0 +1,14 @@
+<div class="container">
+    <h1>Lista de Tarefas</h1>
+
+    <input [(ngModel)]="novaTarefa" placeholder="Digite uma tarefa" />
+    <button (click)="adicionarTarefa()">Adicionar</button>
+
+    <ul>
+      <li *ngFor="let tarefa of tarefas; let i = index">
+        <input type="checkbox" [(ngModel)]="tarefa.concluida" (change)="alternarConclusao(tarefa)" />
+        <span [class.concluida]="tarefa.concluida">{{ tarefa.titulo }}</span>
+        <button (click)="removerTarefa(i)">Remover</button>
+    </li>
+    </ul>
+</div>

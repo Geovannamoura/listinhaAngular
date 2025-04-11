@@ -1,0 +1,13 @@
+/* Garante que a página use 100% da altura da tela */
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Faz o app ocupar todo o espaço e permite o layout vertical */
+app-root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
